@@ -1,0 +1,11 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: npx commitlint --edit --color
+
+pre-commit:
+  parallel: true
+  commands:
+    code:
+      glob: '*.{js,jsx,ts,tsx}'
+      run: npx eslint {staged_files} --fix && git add {staged_files}
