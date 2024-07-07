@@ -1,7 +1,7 @@
 name: Welcome to GitFusion
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
