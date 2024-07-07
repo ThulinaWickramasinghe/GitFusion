@@ -1,0 +1,17 @@
+name: Welcome to GitFusion
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log Welcome Message
+        run: echo "Welcome to GitFusion!"
