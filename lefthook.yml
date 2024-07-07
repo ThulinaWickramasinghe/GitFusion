@@ -4,8 +4,7 @@ commit-msg:
       run: npx commitlint --edit --color
 
 pre-commit:
-  parallel: true
   commands:
-    code:
-      glob: '*.{js,jsx,ts,tsx}'
-      run: npx eslint {staged_files} --fix && git add {staged_files}
+    format:
+      glob: '*.{css,html,json,less,md,scss,yaml,yml,ts,tsx}'
+      run: npx prettier --write {staged_files} && git add {staged_files}
