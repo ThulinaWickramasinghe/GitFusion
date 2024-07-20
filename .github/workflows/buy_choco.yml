@@ -1,0 +1,32 @@
+name: Buy chocolate
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  going_to_the_shop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Walk to the bus halt
+        run: echo "Walking to the bus halt"
+
+      - name: Get into a bus
+        run: echo "Getting into a bus"
+
+      - name: Get out of the bus
+        run: echo "Getting out of the bus"
+
+  buy_chocolate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Select chocolate
+        run: echo "Seelcting chocolate"
+
+      - name: Buy chocolate
+        run: echo "Buying chocolate"
+
+        
